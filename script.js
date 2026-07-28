@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ---------- CONFIGURAÇÃO ---------- */
+  // Cole aqui a URL do "App da Web" gerada no Google Apps Script
+  // (Implantar > Nova implantação > App da Web > copiar URL /exec)
+  const SCRIPT_URL = 'COLE_AQUI_A_URL_DO_APPS_SCRIPT';
+
   /* ---------- MENU MOBILE ---------- */
   const navToggle = document.getElementById('navToggle');
   const nav = document.getElementById('nav');
@@ -90,10 +95,40 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Aqui entraria a integração com o backend / CRM / planilha.
-      form.hidden = true;
-      success.hidden = false;
-      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'ENVIANDO...';
+
+      const payload = {
+        nome: form.nome.value,
+        empresa: form.empresa.value,
+        whatsapp: form.whatsapp.value,
+        email: form.email.value,
+        qtd: form.qtd.value
+      };
+
+      // O Apps Script exige "no-cors" quando chamado direto do navegador;
+      // por isso não conseguimos ler a resposta, mas o envio funciona
+      // normalmente e a linha é gravada na planilha.
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(payload)
+      })
+        .then(() => {
+          form.hidden = true;
+          success.hidden = false;
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .catch(() => {
+          alert('Não foi possível enviar seu cadastro agora. Tente novamente em instantes ou fale com a gente pelo WhatsApp.');
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalLabel;
+        });
     });
   }
 
