@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- REVEAL ON SCROLL ---------- */
   const revealTargets = document.querySelectorAll(
     '.section__title, .lede, .statement, .transform-col, .compare__col, ' +
-    '.checklist li, .included li, .pillar, .module, .hero__stats, .form, .stat'
+    '.checklist li, .included li, .pillar, .module, .hero__stats, .form, .stat, ' +
+    '.instructor__photo, .instructor__bio, .lede'
   );
   revealTargets.forEach(el => el.classList.add('reveal'));
 
