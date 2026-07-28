@@ -156,6 +156,35 @@ h1,h2,h3,h4{ font-family:var(--font-display); margin:0; letter-spacing:.01em; }
 .btn--ghost{ border-color:#C7D0DA; color:#fff; }
 .btn--ghost:hover{ border-color:#fff; }
 .btn--block{ width:100%; }
+.btn--whatsapp{
+  background:#25D366;
+  color:#0E1F33;
+  gap:10px;
+  font-size:15px;
+}
+.btn--whatsapp:hover{ background:#1ebe5a; transform:translateY(-2px); }
+.btn__icon{ width:20px; height:20px; flex:none; }
+
+.alt-contact{ margin-top:52px; border-top:1px solid var(--navy-line); padding-top:28px; }
+.alt-contact summary{
+  cursor:pointer;
+  font-family:var(--font-display);
+  font-size:15px;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:#C7D0DA;
+  list-style:none;
+}
+.alt-contact summary::-webkit-details-marker{ display:none; }
+.alt-contact summary::after{
+  content:"+";
+  float:right;
+  color:var(--rust);
+  font-size:20px;
+  line-height:1;
+}
+.alt-contact[open] summary::after{ content:"–"; }
+.alt-contact .lede{ margin-top:20px; }
 
 /* ============================================
    HERO

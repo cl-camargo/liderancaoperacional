@@ -430,56 +430,75 @@
     </div>
   </section>
 
-  <!-- CTA / FORMULÁRIO -->
+  <!-- CTA / INSCRIÇÃO -->
   <section class="section section--dark" id="contato">
     <div class="container container--narrow">
       <p class="eyebrow eyebrow--light"><span class="eyebrow__bar"></span>COMECE AGORA</p>
       <h2 class="section__title section__title--light">Comece a formar líderes dentro da sua operação</h2>
       <p class="lede lede--light">
-        Preencha o formulário e veja como levar o Liderança Operacional na
-        Prática para sua empresa. Após o envio, entraremos em contato para
-        entender o momento da sua empresa, definir o investimento e
-        apresentar o melhor formato de aplicação do treinamento.
+        Para se inscrever no Liderança Operacional na Prática, entre no
+        nosso grupo do WhatsApp. É por lá que enviamos as próximas turmas,
+        valores e todas as orientações para levar o treinamento até a sua
+        empresa.
       </p>
 
-      <form class="form" id="leadForm">
-        <div class="form__row">
-          <label>
-            Nome completo
-            <input type="text" name="nome" required placeholder="Seu nome">
-          </label>
-          <label>
-            Empresa
-            <input type="text" name="empresa" required placeholder="Nome da empresa">
-          </label>
-        </div>
-        <div class="form__row">
-          <label>
-            WhatsApp
-            <input type="tel" name="whatsapp" required placeholder="(xx) xxxxx-xxxx">
-          </label>
-          <label>
-            E-mail
-            <input type="email" name="email" required placeholder="voce@empresa.com">
-          </label>
-        </div>
-        <label>
-          Quantas pessoas você pretende formar?
-          <select name="qtd">
-            <option>1 a 5 colaboradores</option>
-            <option>6 a 15 colaboradores</option>
-            <option>16 a 30 colaboradores</option>
-            <option>Mais de 30 colaboradores</option>
-          </select>
-        </label>
-        <button type="submit" class="btn btn--accent btn--block">QUERO LEVAR PARA MINHA EMPRESA</button>
-        <p class="form__note">Para mais informações: xx xxxxx xxxx</p>
-      </form>
+      <a
+        href="https://chat.whatsapp.com/D6FPCY8NBPr7Lr1LrvIhaN?s=cl&p=a&ilr=1"
+        target="_blank"
+        rel="noopener"
+        class="btn btn--whatsapp"
+      >
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9 9.5 7.8 9.3 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.3 1 1-3.2-.2-.3C3.6 15 3 13.5 3 12c0-4.9 4-8.9 9-8.9s9 4 9 8.9-4 9.2-9 9.2z"/></svg>
+        ENTRAR NO GRUPO DO WHATSAPP
+      </a>
 
-      <div class="form__success" id="formSuccess" hidden>
-        <h3>Recebemos o seu contato.</h3>
-        <p>Nossa equipe vai falar com você em breve para entender o momento da sua empresa e apresentar o melhor formato de aplicação do treinamento.</p>
-      </div>
+      <details class="alt-contact">
+        <summary>Prefere ser contatado direto pela nossa equipe?</summary>
+        <p class="lede lede--light">
+          Preencha o formulário abaixo e entraremos em contato para entender
+          o momento da sua empresa, definir o investimento e apresentar o
+          melhor formato de aplicação do treinamento.
+        </p>
+
+        <form class="form" id="leadForm">
+          <div class="form__row">
+            <label>
+              Nome completo
+              <input type="text" name="nome" required placeholder="Seu nome">
+            </label>
+            <label>
+              Empresa
+              <input type="text" name="empresa" required placeholder="Nome da empresa">
+            </label>
+          </div>
+          <div class="form__row">
+            <label>
+              WhatsApp
+              <input type="tel" name="whatsapp" required placeholder="(xx) xxxxx-xxxx">
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" required placeholder="voce@empresa.com">
+            </label>
+          </div>
+          <label>
+            Quantas pessoas você pretende formar?
+            <select name="qtd">
+              <option>1 a 5 colaboradores</option>
+              <option>6 a 15 colaboradores</option>
+              <option>16 a 30 colaboradores</option>
+              <option>Mais de 30 colaboradores</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn--accent btn--block">QUERO LEVAR PARA MINHA EMPRESA</button>
+          <p class="form__note">Para mais informações: xx xxxxx xxxx</p>
+        </form>
+
+        <div class="form__success" id="formSuccess" hidden>
+          <h3>Recebemos o seu contato.</h3>
+          <p>Nossa equipe vai falar com você em breve para entender o momento da sua empresa e apresentar o melhor formato de aplicação do treinamento.</p>
+        </div>
+      </details>
     </div>
   </section>
 
