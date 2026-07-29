@@ -14,11 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- MENU MOBILE ---------- */
   const navToggle = document.getElementById('navToggle');
   const nav = document.getElementById('nav');
+  const headerEl = document.querySelector('.header');
+
+  const positionNav = () => {
+    if (headerEl && nav) {
+      const bottom = headerEl.getBoundingClientRect().bottom;
+      nav.style.top = bottom + 'px';
+    }
+  };
 
   if (navToggle && nav) {
     navToggle.addEventListener('click', () => {
+      positionNav();
       const isOpen = nav.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    window.addEventListener('resize', positionNav);
+    window.addEventListener('scroll', () => {
+      if (nav.classList.contains('is-open')) positionNav();
     });
 
     nav.querySelectorAll('a').forEach(link => {
