@@ -77,7 +77,11 @@ h1,h2,h3,h4{ font-family:var(--font-display); margin:0; letter-spacing:.01em; }
   font-size:11px;
   letter-spacing:.14em;
   text-align:center;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
+.topbar__short{ display:none; }
 
 /* ============================================
    HEADER
@@ -658,4 +662,7 @@ h1,h2,h3,h4{ font-family:var(--font-display); margin:0; letter-spacing:.01em; }
   .pillars{ grid-template-columns:1fr; }
   .hero{ padding:72px 0 48px; }
   .section{ padding:64px 0; }
+  .topbar__full{ display:none; }
+  .topbar__short{ display:inline; }
+  .topbar__inner{ font-size:10px; letter-spacing:.08em; padding:8px 16px; }
 }
