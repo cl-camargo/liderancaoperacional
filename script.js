@@ -81,6 +81,15 @@ document.addEventListener('DOMContentLoaded', () => {
     dialObserver.observe(dial);
   }
 
+  /* ---------- LOGO: VOLTAR AO TOPO ---------- */
+  const logoLink = document.querySelector('.brand[href="#topo"]');
+  if (logoLink) {
+    logoLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   /* ---------- BACK TO TOP ---------- */
   const backToTop = document.getElementById('backToTop');
   if (backToTop) {
