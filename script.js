@@ -3,7 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- CONFIGURAÇÃO ---------- */
   // Cole aqui a URL do "App da Web" gerada no Google Apps Script
   // (Implantar > Nova implantação > App da Web > copiar URL /exec)
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzkVQSzAEMSqNrgmCRvyUYTRyA2pX2-KJkSh4uZr9IFI1KsqlMH3j7DoDi9yMCKs1Q/exec';
+  const SCRIPT_URL = 'COLE_AQUI_A_URL_DO_APPS_SCRIPT';
+
+  /* ---------- ANO NO RODAPÉ ---------- */
+  const footerYear = document.getElementById('footerYear');
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
 
   /* ---------- MENU MOBILE ---------- */
   const navToggle = document.getElementById('navToggle');
