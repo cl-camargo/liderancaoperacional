@@ -235,7 +235,7 @@ h1,h2,h3,h4{ font-family:var(--font-display); margin:0; letter-spacing:.01em; }
   text-transform:uppercase;
   max-width:780px;
 }
-.hero__title .hl{ color:var(--rust); }
+.hero__title .hl{ color:var(--rust); display:block; margin-top:.12em; }
 .hero__subtitle{
   margin:26px 0 36px;
   max-width:560px;
